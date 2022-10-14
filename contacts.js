@@ -29,7 +29,7 @@ async function getContactById(contactId) {
 async function removeContact(contactId) {
     try {
         const contacts = await listContacts();
-        // contacts.filter(element => Number(element.id) === contactId);
+
         contacts.splice(contactId - 1, 1);
         return contacts;
     } catch (err) {
